@@ -8,4 +8,8 @@ export class HeaderComponent {
 
   @Output() viewChanged = new EventEmitter<string>();
 
+  onSelect(viewId: string) {
+    this.viewChanged.emit(viewId);
+  }
+
 }

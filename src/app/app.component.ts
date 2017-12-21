@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   viewId = 'recipes';
 
-  onViewChange(viewId) {
+  onNavigate(viewId: string) {
     this.viewId = viewId;
   }
 
