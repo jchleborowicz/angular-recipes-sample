@@ -14,7 +14,10 @@ export class ShoppingEditComponent {
   @ViewChild('amountInput') amountInput: ElementRef;
 
   onAddClicked() {
-    this.ingredientAdded.emit(new Ingredient(this.nameInput.nativeElement.value,
-      this.amountInput.nativeElement.value));
+    const name = this.nameInput.nativeElement.value;
+    const amount = this.amountInput.nativeElement.value;
+    const ingredient = new Ingredient(name, amount);
+
+    this.ingredientAdded.emit(ingredient);
   }
 }
