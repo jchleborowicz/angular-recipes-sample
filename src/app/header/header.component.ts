@@ -1,4 +1,4 @@
-import {Component, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,6 @@ import {Component, EventEmitter} from '@angular/core';
 })
 export class HeaderComponent {
 
-  viewChanged = new EventEmitter<string>();
+  @Output() viewChanged = new EventEmitter<string>();
 
 }
