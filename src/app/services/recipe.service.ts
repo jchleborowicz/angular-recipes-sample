@@ -29,15 +29,15 @@ export class RecipeService {
   constructor(private shoppingListService: ShoppingListService) {
   }
 
-  getByName(name: string) {
-    return this.recipes.find(recipe => recipe.name === name);
-  }
-
   getRecipes() {
     return this.recipes.slice();
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
+  }
+
+  getById(id: number) {
+    return this.recipes[id];
   }
 }
