@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  viewId = 'recipes';
-
-  onNavigate(viewId: string) {
-    this.viewId = viewId;
-  }
-
 }
