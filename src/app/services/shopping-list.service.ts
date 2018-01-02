@@ -11,6 +11,7 @@ export class ShoppingListService {
   private ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
     new Ingredient('Tomatoes', 10),
+    new Ingredient('Oranges', 15),
   ];
 
   getIngredients() {
@@ -39,5 +40,10 @@ export class ShoppingListService {
 
   private notifyIngredientsChanged() {
     this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+  deleteIngredient(index: number) {
+    this.ingredients.splice(index, 1);
+    this.notifyIngredientsChanged();
   }
 }
