@@ -30,7 +30,7 @@
           </button>
           <button class="btn btn-danger"
                   type="button"
-                  [disabled]="!editMode"
+                  *ngIf="editMode"
                   (click)="deleteIngredient()">Delete
           </button>
           <button class="btn btn-primary"
